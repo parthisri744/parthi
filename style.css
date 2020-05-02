@@ -1,0 +1,121 @@
+.header{
+    height: 150px;
+}
+.header h1{
+    padding-top: 10px;
+    color: teal;
+    text-shadow: 2px 2px black;
+}
+.header .header-block {
+    width: 1000px;
+    margin: 0 auto;
+}
+.menu {
+   width: 1000px;
+   float: left;
+}
+.menu ul {
+    height: 40px;
+    padding-top: 5px;
+   margin-left: 30px;
+   background-color: #1111;
+}
+.menu ul li{
+  float: left;
+  list-style-type: none;
+   margin: 0 50px;
+   color: brown;
+   font-weight:bolder;
+   font-size: x-large;
+}
+.menu ul li:hover{
+    color: red;
+}
+img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.content{
+    height: auto;
+}
+.content .content-block{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #1111;
+}
+.content-block p{
+    color:gray;
+    text-indent: 200px;
+    font-size: x-large;
+    margin: 0px 50px 0px 40px;
+    padding-top: 30px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+.content-block h1{
+    color: red  ;
+}
+.footer {
+    padding-top: 20px;
+     height: 50px;
+      margin:0 auto;
+}
+.footer .footer-block {
+      color: white;
+      font-size: x-large;
+      font-weight: bolder;
+      width: 1000px;
+      margin: 0 auto;
+     text-align: center;
+     padding-top: 5px;
+     background-color: gray;
+}
+#div {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+}
+@media only screen and (max-width: 1000px) {
+    .header h1{
+    padding-top: 10px;
+    color: teal;
+    text-shadow: 2px 2px black;
+    margin-left: 350px;
+}
+    .menu ul {
+    height: 60px;
+    padding-top: 5px;
+   margin-left: 10px;
+   background-color: #1111;
+}
+.menu ul li{
+   margin: 0 30px;
+   font-size: xx-large;
+}     
+    .content-block p{
+    color:gray;
+    text-indent: 200px;
+    font-size: 40px;
+    margin: 0px 50px 0px 40px;
+    padding-top: 30px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+img{
+    width: 400px;
+    height: 400px;
+    margin-left: 280px;
+}
+.content-block h1{
+    color: red  ;
+    font-size: 40px;
+}
+.footer .footer-block {
+      color: white;
+      font-size: 50px;
+      font-weight: bolder;
+     padding-top: 3px;
+}
+}
