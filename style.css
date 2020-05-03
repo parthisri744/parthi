@@ -1,29 +1,31 @@
 .header{
-    height: 150px;
+    height: 50px;
+}
+.header .header-block {
+    width: 1000px;
+    margin: 0 auto;
 }
 .header h1{
     padding-top: 10px;
     color: teal;
     text-shadow: 2px 2px black;
 }
-.header .header-block {
+.menu {
+   height: 40px;
+}
+.menu .menu-block {
     width: 1000px;
     margin: 0 auto;
 }
-.menu {
-   width: 1000px;
-   float: left;
-}
-.menu ul {
+.menu-block  ul {
     height: 40px;
     padding-top: 5px;
-   margin-left: 30px;
    background-color: #1111;
 }
 .menu ul li{
   float: left;
   list-style-type: none;
-   margin: 0 50px;
+   margin: 0px 100px 0px 10px;
    color: brown;
    font-weight:bolder;
    font-size: x-large;
@@ -35,6 +37,7 @@ img{
     border-radius: 50%;
     width: 200px;
     height: 200px;
+    margin-top: 30px;
 }
 .content{
     height: auto;
@@ -52,6 +55,7 @@ img{
     padding-top: 30px;
     line-height: 1.5;
     padding-bottom: 20px;
+    background-color: white;
 }
 .content-block h1{
     color: red  ;
@@ -78,44 +82,81 @@ img{
     user-select: none;
 }
 @media only screen and (max-width: 1000px) {
+    .header{
+        height: 50px;
+    }
+    .header .header-block {
+        width: auto;
+        margin: 0 auto;
+    }
     .header h1{
-    padding-top: 10px;
-    color: teal;
-    text-shadow: 2px 2px black;
-    margin-left: 350px;
-}
-    .menu ul {
-    height: 60px;
-    padding-top: 5px;
-   margin-left: 10px;
-   background-color: #1111;
-}
-.menu ul li{
-   margin: 0 30px;
-   font-size: xx-large;
-}     
+        padding-top: 10px;
+        color: green;
+        font-size: xx-large;
+        text-shadow: 2px 2px black;
+    }
+    .menu {
+       height: 40px;
+    }
+    .menu .menu-block {
+        width: auto;
+        margin: 0 auto;
+    }
+    .menu-block  ul {
+        height: 60px;
+        padding-top: 5px;
+       background-color: #1111;
+    }
+    .menu ul li{
+      float: left;
+      list-style-type: none;
+       margin: 0px 30px 0px 0px;
+       color: brown;
+       font-weight:bolder;
+       font-size: x-large;
+    }
+    .menu ul li:hover{
+        color: red;
+    }
+    .menu .active{
+        color:red;
+    }
+    img{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+    .content{
+        height: auto;
+    }
+    .content .content-block{
+        width: auto;
+        margin: 0 auto;
+    }
     .content-block p{
-    color:gray;
-    text-indent: 200px;
-    font-size: 40px;
-    margin: 0px 50px 0px 40px;
-    padding-top: 30px;
-    line-height: 1.5;
-    padding-bottom: 20px;
-}
-img{
-    width: 400px;
-    height: 400px;
-    margin-left: 280px;
-}
-.content-block h1{
-    color: red  ;
-    font-size: 40px;
-}
-.footer .footer-block {
-      color: white;
-      font-size: 50px;
-      font-weight: bolder;
-     padding-top: 3px;
-}
+        color:gray;
+        text-indent: 50px;
+        font-size: large;
+        margin: 0px 10px 0px 10px;
+        padding-top: 30px;
+        line-height: 1.5;
+        padding-bottom: 20px;
+        background-color: white;
+    }
+    .content-block h1{
+        color: red ;
+        font-size: large;
+    }
+    .footer {
+        padding-top: 20px;
+         height: 50px;
+          margin:0 auto;
+    }
+    .footer .footer-block {
+          font-weight: bolder;
+          width: auto;
+          margin: 0 auto;
+         text-align: center;
+         padding-bottom: 10px;
+    }
 }
