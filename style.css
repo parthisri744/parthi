@@ -166,4 +166,10 @@ img{
          text-align: center;
          padding-bottom: 10px;
     }
+    #div {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+         -ms-user-select: none;
+          user-select: none;
+      }
 }
