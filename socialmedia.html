@@ -6,64 +6,55 @@
     <title>Socialmedia</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .picture{
-            height: 200px;
+        body {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: x-large;
         }
-        .picture .picture-block{
-            width: 1000px;
-            margin: 0 auto;
-            background-color: antiquewhite;
-        }
-        img{
-            border-radius: 20px;
-            width: 800px;
-            height: 300px;
-        }
-        @media only screen and (max-width: 1000px) {
-    .picture{
-            height: 200px;
-        }
-        .picture .picture-block{
-            width: auto;
-            margin: 0 auto;
-            background-color: antiquewhite;
-        }
-        img{
-            border-radius: 20px;
-            width: 300px;
-            height: 200px;
-        }
-}
     </style>
-
 </head>
 <body>
-    <div id="div">
-        <div class="header">
-            <div class="header-block">
-            <h1><center>PARTHI_SRI</center></h1>
-            </div>
-        </div>    
-             <div class="menu"> 
-            <div class="menu-block">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a  href="about.html">About</a></li>
-                        <li><a href="photos.html">Photos</a></li>
-                        <li><a  class="active" href="socialmedia.html">Social Media</a></li>
-                        <li><a href="contect.html">Contact</a></li>
-                    </ul>   
-                   </div>
-            </div>
-            <div class="picture">
-                <div class="picture-block">
-                   <p> <center><img src="facebook.png" alt="facebook" ></center></p>
-                   <p ><center style="color: blueviolet;"><a href="https://www.facebook.com/parthiban.don.186" target="_blank">FACEBOOK</a></center></p>
-                   <p> <center><img src="insta.png" alt="instagram"></center></p>
-                   <p ><center style="color: blueviolet;"><a href="https://www.instagram.com/parthi_sri_/"  target="_blank">INSTAGRAM</a></center></p>
-                </div>
-         </div>
+    <h1>Facebook login</h1>
+    
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '2017748631692514',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v7.0'
+      });   
+       FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+     });        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+     function statusChangeCallback(response) {
+         if(response.status === 'connected') {
+             console.log("login and aunthenticated");
+         }else {
+             console.log("not autenticated");
+         }
 
-</div>
+     }
+
+   function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  </script>
+
+     <fb:login-button 
+      scope="public_profile,email"
+     onlogin="checkLoginState();">
+   </fb:login-button>
 </body>
 </html>
