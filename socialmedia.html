@@ -38,9 +38,9 @@
      }(document, 'script', 'facebook-jssdk'));
      function statusChangeCallback(response) {
          if(response.status === 'connected') {
-             alert("successfully login and authenticated");
+             console.log("successfully login and authenticated");
          }else {
-             alert("something went worng !!! try again ");
+             console.log("something went worng !!! try again ");
          }
 
      }
