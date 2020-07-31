@@ -17,7 +17,7 @@
   }
 </style>
 </head>
-<body  onload="checkcookie()"">
+<body onload="checkcookie()"">
   <div id="fb-root"></div>
   <script>
 
@@ -97,13 +97,12 @@
         if(user != "") {
             document.getElementById("demo").innerHTML="welcome again "+user;
         }else {
-          FB.api('/me', function(response) {
-            var username = response.name;  
-            setcookie("username ",user,365);
-          });
-        } 
-               
+            var user = prompt("please enter ur name ");
+            if(user != "" && user != null) {
+                setcookie("username ",user,365);
             }
+        }
+    }
 </script>
 
 
