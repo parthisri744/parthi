@@ -11,9 +11,9 @@
             padding-left: 90px;
 
         }
-        #fbbtn {
-          margin-top: 50px ;
-          margin-right: 50px;
+        .fbbtn {
+          margin-top: 20px ;
+          margin-left: 100px;
         }
         
         @media only screen and (max-width: 1000px) {
@@ -126,11 +126,13 @@
         </div>   
         <div class="content">
           <div class="content-block">          
-            <h1 align="center">Face-book login</h1>
-          <fb:login-button  id="fbbtn"
+          <h1 align="center">Face-book login</h1>
+          <div class=" fbbtn">
+          <fb:login-button 
           scope="public_profile,email"
           onlogin="checkLoginState();">
           </fb:login-button>
+                </div>  
           </div>
       </div>
 </body>
