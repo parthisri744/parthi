@@ -98,8 +98,10 @@ nonce="Z4ODIqCZ">
      function statusChangeCallback(response) {
          if(response.status === 'connected') {
              console.log("successfully login and authenticated");
+             setElements(true);
          }else {
              console.log("something went worng !!! try again ");
+             setElements(false);
          }
 
      }
@@ -108,6 +110,16 @@ nonce="Z4ODIqCZ">
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
+  }
+  function setElements(isLoggedIn) {
+    if(isLoggedIn) {
+      document.getElementById("profile").style.display ="block";
+      document.getElementById("fbbtn").style.display ="none";
+
+    }else {
+      document.getElementById("profile").style.display ="none";
+      document.getElementById("fbbtn").style.display ="block";
+    }
   }
   </script>
   <div id="div">
