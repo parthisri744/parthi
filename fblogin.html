@@ -66,6 +66,7 @@
   }
   function logout() {
     FB.logout(function(response) {
+       statusChangeCallback(response);
        testAPI(false);
     }); 
   } 
