@@ -5,77 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socialmedia</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        span{
-            color: red;
-            padding-left: 90px;
-
-        }
+    <style>     
         #fbbtn {
           float: right;
           padding-top:  -20px;
         }
-        
-        @media only screen and (max-width: 1000px) {
-    .header{
-        height: 50px;
-    }
-    .header .header-block {
-        width: auto;
-        margin: 0 auto;
-    }
-    .header h1{
-        padding-top: 10px;
-        color: green;
-        font-size: xx-large;
-        text-shadow: 2px 2px black;
-    }
-    .menu {
-       height: 80px;
-    }
-    .menu .menu-block {
-        width: auto;
-        margin: 0 auto;
-    }
-    .menu-block  ul {
-        height: 60px;
-        padding-top: 5px;
-       background-color: #1111;
-    }
-    .menu ul li{
-      float: left;
-      list-style-type: none;
-       margin: 0px 30px 0px 0px;
-       color: brown;
-       font-weight:bolder;
-       font-size: x-large;
-    }
-    .menu ul li:hover{
-        color: red;
-    }
-    .menu .active{
-        color:red;
-    }
-    .content-block p{
-        color:gray;
-        font-size: large;
-        margin: 0px 10px 0px 10px;
-        padding-top: 30px;
-        background-color: white;
-    }
-    span{
-            color: red;
-            padding-left: 30px;
-        
-}
-}
     </style>
 </head>
 <body> 
   <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
-src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=2017748631692514&autoLogAppEvents=1" 
-nonce="xe3POHkn">
+<script>
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '2017748631692514',
@@ -120,32 +59,15 @@ nonce="xe3POHkn">
       document.getElementById("fbbtn").style.display ='block';
     }
   }
-
   </script>
-  <div id="div">
-    <div class="header">
-        <div class="header-block">
-        <h1><center>PARTHI_SRI</center></h1>
-        </div>
-    </div>    
-         <div class="menu"> 
-        <div class="menu-block">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a  class="active" href="about.html">About</a></li>
-                    <li><a href="photos.html">Photos</a></li>
-                    <li><a  href="socialmedia.html">Social Media</a></li>
-                    <li><a href="contect.html">Contact</a></li>
-                </ul>   
-               </div>
-        </div>   
-        <div class="content">
-          <div class="content-block">       
-            <h1>Login to view your profile</h1>   
-            <div id="fbbtn" class="fb-login-button" data-size="large" data-button-type="continue_with"
-             data-layout="rounded" data-auto-logout-link="true" 
-             data-use-continue-as="true" data-width=""></div>
-          </div>
-      </div>
+  
+  <button id="log-out" onclick="logout()">Logout</button>
+  <div id="fb-btn" class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="rounded"
+   data-auto-logout-link="false" data-use-continue-as="true" data-width=""></div><br>
+  <div id="status">
+    <script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=2017748631692514&autoLogAppEvents=1" 
+nonce="GisofqBS"></script>
+  </div>
 </body>
 </html>
