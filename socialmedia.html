@@ -13,7 +13,7 @@
         }
         #fbbtn {
           margin-top: 20px ;
-           padding-left: 380px;
+          padding-left: 380px;
         }
         
         @media only screen and (max-width: 1000px) {
@@ -72,9 +72,8 @@
     </style>
 </head>
 <body> 
-<script async defer crossorigin="anonymous" 
-src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=2017748631692514&autoLogAppEvents=1"
- nonce="RnIce6XH">
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=2017748631692514&autoLogAppEvents=1" nonce="H4guHtm0">
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '2017748631692514',
@@ -129,6 +128,9 @@ src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=201774
         <div class="content">
           <div class="content-block">          
           <h1 align="center">Face-book login</h1>
+          <div class="fb-login-button" data-size="large" data-button-type="login_with" 
+           data-layout="rounded" data-auto-logout-link="false"
+            data-use-continue-as="true" data-width=""></div>
           <fb:login-button id="fbbtn"
           scope="public_profile,email"
           onlogin="checkLoginState();">
