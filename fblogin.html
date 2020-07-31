@@ -54,13 +54,16 @@
 
 <!-- The JS SDK Login Button -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+<div id="fbbtn" class="fb-login-button" data-size="large" data-button-type="continue_with"
+data-layout="rounded" data-auto-logout-link="true" 
+data-use-continue-as="true" data-width=""></div>>
 
 <div id="status">
 </div>
 
 <!-- Load the JS SDK asynchronously -->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=2017748631692514&autoLogAppEvents=1" 
+nonce="xe3POHkn"></script>
 </body>
 </html>
