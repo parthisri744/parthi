@@ -98,13 +98,13 @@ nonce="xhyDUmzT">
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
      function statusChangeCallback(response) {
-         if(response.status === 'connected') {
-            setElements(true);   
+         if(response.status === 'connected') { 
              console.log("successfully login and authenticated");
+             document.getElementById("fbbtn").style.display ='none';
              
          }else {
              console.log("something went worng !!! try again ");
-             setElements(false);
+             document.getElementById("fbbtn").style.display ='block';
          }
 
      }
@@ -114,15 +114,16 @@ nonce="xhyDUmzT">
       statusChangeCallback(response);
     });
   }
-  function setElements(isLoggedIn) {
+     /*function setElements(isLoggedIn) {
     if(isLoggedIn) {
       document.getElementById("profile").style.display ='block';
-      document.getElementById("fbbtn").style.display ='none';
+     
     }else {
       document.getElementById("profile").style.display ='none';
       document.getElementById("fbbtn").style.display ='block';
     }
   }
+  */
   </script>
   <div id="div">
     <div class="header">
