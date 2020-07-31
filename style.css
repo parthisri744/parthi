@@ -51,12 +51,12 @@ img{
 }
 .content .content-block{
     width: 1000px;
+    height: 200px;
     margin: 0 auto;
     background-color: #1111;
 }
 .content-block p{
     color:gray;
-    text-align: center;
     font-size: x-large;
     margin: 30px 50px 0px 40px;
     padding-top: 30px;
