@@ -73,7 +73,9 @@
     </style>
 </head>
 <body> 
-<script>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=2017748631692514&autoLogAppEvents=1"
+ nonce="RnIce6XH">
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '2017748631692514',
@@ -126,29 +128,18 @@
                </div>
         </div>   
         <div class="content">
-          <div class="content-block">          
+          <di class="content-block">          
           <h1 align="center">Face-book login</h1>
-          <div id="spinner"
-          style="
-              padding-left :350px;
-              background: #4267b2;
-              border-radius: 5px;
-              color: white;
-              height: 40px;
-              text-align: center;
-              width: 250px;"> loading
-          <div
-          class="fb-login-button"
-          data-max-rows="1"
-          data-size="large"
-          data-button-type="continue_with"
-          data-use-continue-as="true"
-          > 
-          <fb:login-button 
+         
+          <div class="fb-login-button" data-size="large" data-button-type="continue_with" 
+          data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"
+           data-width="">
+           <fb:login-button 
           scope="public_profile,email"
           onlogin="checkLoginState();">
-          </fb:login-button></div>
-      </div>
+          </fb:login-button>
+          </div>
+         
         
           </div>
       </div>
