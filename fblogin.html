@@ -60,9 +60,9 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+        document.getElementById("fb-btn").style.display = "none";
+        document.getElementById("log-out").style.display = "block";
     });
-    document.getElementById("fb-btn").style.display = "none";
-     document.getElementById("log-out").style.display = "block";
   }
   function logout() {
     FB.logout(function(response) {
