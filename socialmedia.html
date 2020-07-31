@@ -17,7 +17,7 @@
   }
 </style>
 </head>
-<body align="center">
+<body  onload="checkcookie()"">
   <div id="fb-root"></div>
   <script>
 
@@ -71,6 +71,38 @@
 
     }); 
   } 
+  function setcookie(cname , cvalue, expdays) {
+    var d = new Date();
+    d.setTime(d.getTime()+(expdays*24*60*60*1000));
+    var expire = "expire ="+ d.toUTCString();
+    document.cookie = cname +" = "+ cvalue +";"+expire +";path=/";
+    }
+    function getcookie(cname) {
+        var name = cname + "=";
+        var decodecookie = decodeURIComponent(document.cookie);
+        var ca = decodecookie.split(";");
+        for(var i=0;i<ca.length;i++) {
+             var c = ca[i];
+             while(c.charAt(0) =='') {
+                 c.substring(1);
+             }
+             if(c.indexOf(name)==0) {
+                 return c.substring(name.length,c.length);
+             }
+        }
+        return "";
+    }
+    function checkcookie() {
+        var user = getcookie("username");
+        if(user != "") {
+            document.getElementById("demo").innerHTML="welcome again "+user;
+        }else {
+          FB.api('/me', function(response) {
+            var username = response.name;  
+          });
+        } 
+                setcookie("username ",user,365);
+            }
 </script>
 
 
