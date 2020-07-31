@@ -68,14 +68,14 @@
   function logout() {
     FB.logout(function(response) {
        statusChangeCallback(response);
-       testAPI(false);
+       testAPI(true);
     }); 
   } 
 </script>
 
 
 <!-- The JS SDK Login Button -->
-<button id="log-out" ondblclick="logout()"   >Logout</button>
+<button id="log-out" ondblclick="logout()">Logout</button>
 <div id="fb-btn" class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="rounded"
  data-auto-logout-link="false" data-use-continue-as="true" data-width=""></div><br>
 <div id="status">
