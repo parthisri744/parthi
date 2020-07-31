@@ -11,10 +11,9 @@
             padding-left: 90px;
 
         }
-        .fbbtn {
+        #fbbtn {
           margin-top: 20px ;
            padding-left: 380px;
-           size: 50px;
         }
         
         @media only screen and (max-width: 1000px) {
@@ -130,7 +129,7 @@ src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=201774
         <div class="content">
           <di class="content-block">          
           <h1 align="center">Face-book login</h1>
-          <fb:login-button 
+          <fb:login-button id="fbbtn"
           scope="public_profile,email"
           onlogin="checkLoginState();">
         </fb:login-button>
