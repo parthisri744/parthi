@@ -16,7 +16,7 @@
     }
 </style>
 </head>
-<body align="center" onclick="window.location.reload">
+<body align="center" >
 <script>
 
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
@@ -68,7 +68,8 @@
   function logout() {
     FB.logout(function(response) {
        statusChangeCallback(response);
-       testAPI(true);
+       testAPI(false);
+       window.location.reload;
     }); 
   } 
 </script>
