@@ -99,9 +99,10 @@
         }else {
           FB.api('/me', function(response) {
             var username = response.name;  
+            setcookie("username ",user,365);
           });
         } 
-                setcookie("username ",user,365);
+               
             }
 </script>
 
