@@ -13,10 +13,11 @@
     console.log('statusChangeCallback');
     console.log(response);                   // The current login status of the person.
     if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-      testAPI();  
+      testAPI(true);  
     } else {                                 // Not logged into your webpage or we are unable to tell.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this webpage.';
+        documen.getElementById("fb-btn").style.display = "block";
     }
   }
 
@@ -48,8 +49,8 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-        documen.getElementById("fbbtn").style.display = "none";
     });
+    documen.getElementById("fb-btn").style.display = "none";
   }
 
 </script>
@@ -57,8 +58,8 @@
 
 <!-- The JS SDK Login Button -->
 
-<div id="fbbtn" class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="rounded"
- data-auto-logout-link="false" data-use-continue-as="true" data-width=""></div>
+<div id="fb-btn" class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="rounded"
+ data-auto-logout-link="false" data-use-continue-as="true" data-width=""></div><br>
 <div id="status">
 </div>
 
