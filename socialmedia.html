@@ -9,7 +9,13 @@
         span{
             color: red;
             padding-left: 90px;
-        }@media only screen and (max-width: 1000px) {
+
+        }
+        #fbbtn {
+          padding: 30px;
+        }
+        
+        @media only screen and (max-width: 1000px) {
     .header{
         height: 50px;
     }
@@ -119,7 +125,8 @@
         </div>   
         <div class="content">
           <div class="content-block">          
-          <fb:login-button 
+            <h1>Face-book login</h1>
+          <fb:login-button  id="fbbtn"
           scope="public_profile,email, user_birthday"
           onlogin="checkLoginState();">
           </fb:login-button>
