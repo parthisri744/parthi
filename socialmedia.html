@@ -113,11 +113,9 @@ nonce="xhyDUmzT">
   }
   function setElements(isLoggedIn) {
     if(isLoggedIn) {
-      document.getElementById("profile").style.display ="block";
       document.getElementById("fbbtn").style.display ="none";
 
     }else {
-      document.getElementById("profile").style.display ="none";
       document.getElementById("fbbtn").style.display ="block";
     }
   }
@@ -141,13 +139,14 @@ nonce="xhyDUmzT">
         </div>   
         <div class="content">
           <div class="content-block">          
-            <h1 align="center" id="profile">Login to view your profile</h1>
-            <div class="fb-login-button" 
-            data-size="large" id="fbbtn"
+            <h1 align="center" >Login to view your profile</h1>
+            <div  id="fbbtn" class="fb-login-button" 
+            data-size="large" 
              data-button-type="continue_with" 
              data-layout="rounded"
               data-auto-logout-link="false"
                data-use-continue-as="true" data-width=""></div>   
+               
           </div>
       </div>
 
