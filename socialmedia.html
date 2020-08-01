@@ -40,8 +40,7 @@
       document.getElementById("outhead").style.display = "none";   
       document.getElementById("inhead").style.display = "block";
       document.getElementById("profile").style.display = "block";   
-   
-
+      document.getElementById("footer").style.display = "block";   
 
       } else {                                 // Not logged into your webpage or we are unable to tell.
       document.getElementById("fb-btn").style.display = "block";
@@ -49,6 +48,8 @@
       document.getElementById("outhead").style.display = "block";   
       document.getElementById("inhead").style.display = "none";  
       document.getElementById("profile").style.display = "none";   
+      document.getElementById("footer").style.display = "none";   
+
  
 
 
@@ -159,7 +160,7 @@
     src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=2017748631692514&autoLogAppEvents=1"
      nonce="5xxVthJb"></script>
 </body>
-<div class="card">
+<div id="footer" class="card">
   <div class="card-body">
     <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
     data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
