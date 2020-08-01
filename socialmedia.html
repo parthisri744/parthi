@@ -75,21 +75,17 @@
       console.log('Successful login for: ' + response.name);
       console.log(response);
       document.getElementById("inhead").innerHTML= "Welcome ! "+response.name;
-      buildprofile(response);
-    });
-  }
-    function buildprofile(user) {
       let profile =`
-      <h3>${user.name}</h3>
+      <h3>${response.name}</h3>
       <u1 class = "list-group">
-        <li class = "list-group-item"User ID : ${user.id}></li>
-        <li class = "list-group-item"Email : ${user.email}></li>
-        <li class = "list-group-item"Birthday : ${user.birthday}></li>
+        <li class = "list-group-item"User ID : ${response.id}></li>
+        <li class = "list-group-item"Email : ${response.email}></li>
+        <li class = "list-group-item"Birthday : ${response.birthday}></li>
       </ul>
-      
       `;
       document.getElementById("profile").innerHTML = profile;
-    }
+    });
+  }
   function logout() {
     FB.logout(function(response) {
        statusChangeCallback(response);
