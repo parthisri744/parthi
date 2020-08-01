@@ -75,7 +75,7 @@
       console.log('Successful login for: ' + response.name);
       console.log(response);
       document.getElementById("inhead").innerHTML= "Welcome ! "+response.name;
-      let profile =`
+ /*     let profile =`
       <h3>${response.name}</h3>
       <u1 class = "list-group">-
         <li class = "list-group-item"> User ID : ${response.id}</li>
@@ -83,7 +83,7 @@
         <li class = "list-group-item"> Birthday : ${response.birthday}</li>
       </ul>
       `;
-      document.getElementById("profile").innerHTML = profile;
+      document.getElementById("profile").innerHTML = profile;  */
     });
   }
   function logout() {
