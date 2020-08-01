@@ -90,6 +90,12 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
+          <fb:login-button 
+          scope="public_profile,email"
+          onlogin="checkLoginState();">
+</fb:login-button>
+        </li>
+        <li class="nav-item">
       <button  id="log-out" onclick="logout()">Logout</button>
       <div id="fb-btn" class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="rounded"
       data-auto-logout-link="false" data-use-continue-as="true" data-width=""></div>
