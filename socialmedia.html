@@ -8,16 +8,14 @@
   #log-out {
       background: #4267b2;
       font-size: larger;
-      border-radius: 10px;
+      border-radius:2px;
       color: white;
       height: 30px;
       text-align: center;
-      width: 150px;
+      width: 120px;
       float: right;
   }
-  #fb-btn {
-      
-  }
+ 
 </style>
 </head>
 <body>
@@ -69,7 +67,7 @@
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=id,name,email', function(response) {
+    FB.api('/me?fields=id,name,email,birthday', function(response) {
       console.log('Successful login for: ' + response.name);
       console.log(response);
       document.getElementById("inhead").innerHTML= "Welcome ! "+response.name;
