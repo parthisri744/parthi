@@ -28,9 +28,14 @@
       testAPI();  
       document.getElementById("fb-btn").style.display = "none";
       document.getElementById("log-out").style.display = "block";
+      document.getElementById("lhead").style.display = "none";   
+
       } else {                                 // Not logged into your webpage or we are unable to tell.
       document.getElementById("fb-btn").style.display = "block";
-      document.getElementById("log-out").style.display = "none";    }
+      document.getElementById("log-out").style.display = "none";   
+      document.getElementById("lhead").style.display = "block";   
+
+    }
   }
 
 
@@ -60,7 +65,6 @@
     FB.api('/me?fields=id,name,email', function(response) {
       console.log('Successful login for: ' + response.name);
       console.log(response);
-        alert('Thanks for logging in, ' + response.name + '!');
     });
   }
   function logout() {
@@ -94,7 +98,7 @@
     </div>
   </nav>
   <div align="center" class="container-fluid">
-  <h1>Login in to view your profile </h>
+  <h1 id="lhead">Login in to view your profile </h>
   </div>
 
   <!-- Optional JavaScript -->
