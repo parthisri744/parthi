@@ -30,14 +30,18 @@
       document.getElementById("fb-btn").style.display = "none";
       document.getElementById("log-out").style.display = "block";
       document.getElementById("outhead").style.display = "none";   
-      document.getElementById("inhead").style.display = "block";   
+      document.getElementById("inhead").style.display = "block";
+      document.getElementById("profile").style.display = "block";   
+   
 
 
       } else {                                 // Not logged into your webpage or we are unable to tell.
       document.getElementById("fb-btn").style.display = "block";
       document.getElementById("log-out").style.display = "none";   
       document.getElementById("outhead").style.display = "block";   
-      document.getElementById("inhead").style.display = "none";   
+      document.getElementById("inhead").style.display = "none";  
+      document.getElementById("profile").style.display = "none";   
+ 
 
 
     }
@@ -67,12 +71,30 @@
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=id,name,email,birthday', function(response) {
+    FB.api('/me?fields=id,name,email,user_birthday,user_location', function(response) {
       console.log('Successful login for: ' + response.name);
       console.log(response);
       document.getElementById("inhead").innerHTML= "Welcome ! "+response.name;
+      buildprofile(response);
     });
   }
+    function buildprofile(user) {
+      let profile =`
+      <h3>${user.name}</h3>
+      <u1 class = "list-group">
+        <li class = "list-group-item"User ID : ${user.id}></li>
+        <li class = "list-group-item"Email : ${user.email}></li>
+        <li class = "list-group-item"Birthday : ${user.birthday}></li>
+        <li class = "list-group-item"Location : ${user.location.name}></li>
+      </ul>
+      
+      `;
+      document.getElementById("profile").innerHTML = profile;
+    }
+
+
+
+
   function logout() {
     FB.logout(function(response) {
        statusChangeCallback(response);
@@ -113,6 +135,7 @@
   <div align="center" class="container-fluid">
   <h1 id="outhead">Login in to view your profile </h>
     <h2 id="inhead"></h2>
+    <div id="profile"></div>
   </div>
 
   <!-- Optional JavaScript -->
