@@ -15,7 +15,10 @@
       width: 150px;
       float: right;
   }
-
+  .facebook {
+    width:300px;
+    heigth:100px;
+  }
 </style>
 </head>
 <body>
@@ -95,10 +98,11 @@
         </li>
         <li class="nav-item">
       <button  id="log-out" onclick="logout()">Logout</button>
+      <div class="facebook" >
       <fb:login-button id="fb-btn"
       scope="public_profile,email"
       onlogin="checkLoginState();"   width="150px">
-</fb:login-button> 
+</fb:login-button> </div>
     <!-- <div id="fb-btn" class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="rounded"
       data-auto-logout-link="false" data-use-continue-as="true" data-width=""></div>--> 
         </li>
