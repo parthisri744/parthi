@@ -71,11 +71,11 @@
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=name,id,email,birthday,location', function(response) {
+    FB.api('/me?fields=name,id,email'/*,birthday,location */, function(response) {
       console.log('Successful login for: ' + response.name);
       console.log(response);
       document.getElementById("inhead").innerHTML= "Welcome ! "+response.name;
-     let profile =`
+  /*   let profile =`
       <h3>${response.name}</h3>
       <u1 class = "list-group">-
         <li class = "list-group-item"> User ID : ${response.id}</li>
@@ -85,7 +85,7 @@
 
       </ul>
       `;
-      document.getElementById("profile").innerHTML = profile;  
+      document.getElementById("profile").innerHTML = profile;   */
     });
   }
   function logout() {
