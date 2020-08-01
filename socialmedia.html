@@ -15,11 +15,7 @@
       width: 120px;
       float: right;
   }
-  .fb-like {
-    color: antiquewhite;
-    margin-top: 200px;
-    background-color: azure;
-  }
+ 
 </style>
 </head>
 <body>
@@ -34,7 +30,7 @@
       document.getElementById("fb-btn").style.display = "none";
       document.getElementById("log-out").style.display = "block";
       document.getElementById("outhead").style.display = "none";   
-    //  document.getElementById("inhead").style.display = "block";
+      document.getElementById("inhead").style.display = "block";
       document.getElementById("profile").style.display = "block";   
    
 
@@ -43,7 +39,7 @@
       document.getElementById("fb-btn").style.display = "block";
       document.getElementById("log-out").style.display = "none";   
       document.getElementById("outhead").style.display = "block";   
-    //  document.getElementById("inhead").style.display = "none";  
+      document.getElementById("inhead").style.display = "none";  
       document.getElementById("profile").style.display = "none";   
  
 
@@ -131,8 +127,8 @@
   </nav>
   <div align="center" class="container-fluid">
   <h1 id="outhead">Login in to view your profile </h>
-    <div align="center" id="profile">
-      <h2 id="inhead"></h2>
+    <h2 id="inhead"></h2>
+    <div style="margin: 300px,0px,0px,100px;" id="profile">
       <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
       data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
     </div>
