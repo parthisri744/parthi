@@ -80,7 +80,7 @@
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=name,id,email'/*,birthday,location */, function(response) {
+    FB.api('/me?fields=name,id,email,profile_pic ' /*,birthday,location */, function(response) {
       console.log('Successful login for: ' + response.name);
       console.log(response);
       document.getElementById("inhead").innerHTML= "Welcome ! "+response.name;
